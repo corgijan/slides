@@ -1,23 +1,23 @@
 ---
 title: "EU AI Act"
 author: "Jan Vaorin"
-footer: "Jan Vaorin | adesso SE – EU AI Act"
+footer: "Jan Vaorin | adesso SE  – EU AI Act"
 paginate: true
 marp: true
 ---
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-  /* ===== ADESSO CORPORATE THEME ===== */
+  
   * {
     font-family: "Fira Sans"
   }
 
   :root {
-    --adesso-blue: #2F70A6;
-    --adesso-dark-blue: #2F70A6;
-    --adesso-light-blue: #2F70A6;
-    --adesso-accent: #00A5E3;
+    --adesso-blue: #006ec7;
+    --adesso-dark-blue: #00439e;
+    --adesso-light-blue:#00A5E3 ;
+    --adesso-accent: #27d9a7;
     --adesso-green: #7AB800;
     --adesso-orange: #FF6600;
     --adesso-gray-dark: #333333;
@@ -43,7 +43,7 @@ marp: true
     left: 0;
     width: 6px;
     height: 100%;
-    background: linear-gradient(180deg, var(--adesso-blue), var(--adesso-accent));
+    background: linear-gradient(30deg, var(--adesso-blue), var(--adesso-light-blue));
   }
 
   /* Überschriften */
@@ -51,7 +51,7 @@ marp: true
     color: var(--adesso-blue);
     font-size: 36pt;
     font-weight: 700;
-    border-bottom: 3px solid var(--adesso-accent);
+    border-bottom: 3px solid var(--adesso-blue);
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
@@ -80,7 +80,7 @@ marp: true
 
   /* Blockquote – Definition-Style */
   section blockquote {
-    border-left: 5px solid var(--adesso-accent);
+    border-left: 5px solid var(--adesso-light-blue);
     background: var(--adesso-gray-light);
     padding: 20px 25px;
     margin: 20px 0;
@@ -133,7 +133,7 @@ marp: true
 
   /* ===== TITELFOLIE ===== */
   section.title {
-    background: linear-gradient(135deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 60%, var(--adesso-light-blue) 100%);
+    background: linear-gradient(300deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 60%, var(--adesso-accent) 100%);
     color: var(--adesso-white);
     display: flex;
     flex-direction: column;
@@ -147,12 +147,12 @@ marp: true
   }
   section.title h1 {
     color: var(--adesso-white);
-    border-bottom: 3px solid var(--adesso-accent);
-    font-size: 48pt;
+    border-bottom: 3px solid var(--adesso-light-blue);
+    font-size: 40pt;
     margin-bottom: 10px;
   }
   section.title h2 {
-    color: var(--adesso-accent);
+    color: var(--adesso-light-blue);
     font-size: 26pt;
     font-weight: 400;
   }
@@ -171,23 +171,23 @@ marp: true
     padding: 80px;
   }
   section.chapter::before {
-    background: var(--adesso-accent);
+    background: var(--adesso-light-blue);
     width: 8px;
   }
   section.chapter h1 {
     color: var(--adesso-white);
-    border-bottom: 3px solid var(--adesso-accent);
+    border-bottom: 3px solid var(--adesso-light-blue);
     font-size: 42pt;
   }
   section.chapter h2 {
-    color: var(--adesso-accent);
+    color: var(--adesso-light-blue);
     font-size: 24pt;
     font-weight: 400;
   }
 
   /* ===== ENDFOLIE ===== */
   section.end {
-    background: linear-gradient(135deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 100%);
+    background: linear-gradient(0deg, var(--adesso-blue) 0%, var(--adesso-dark-blue) 100%);
     color: var(--adesso-white);
     display: flex;
     flex-direction: column;
@@ -268,6 +268,15 @@ marp: true
   }
 
   /* ===== DISKUSSIONSFOLIE ===== */
+  section.base2 {
+    background: var(--adesso-blue);
+    color: var(--adesso-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   section.discussion {
     background: linear-gradient(135deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 50%, var(--adesso-accent) 100%);
     color: var(--adesso-white);
@@ -307,6 +316,29 @@ marp: true
     font-size: 20pt;
   }
 </style>
+
+
+
+<!-- _class: base2 -->
+<!-- _paginate: false -->
+
+  <style>
+  .logo-white {
+    width: 200px;           /* adjust to needed size */
+    height: 60px;
+    zoom: 300%;
+    background-color: #fff; /* logo color */
+    -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg")
+                  no-repeat center / contain;
+    mask: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg")
+         no-repeat center / contain;
+  }
+</style>
+
+<div class="logo-white"></div>
+
+---
+
 
 <!-- _class: title -->
 <!-- _paginate: false -->
@@ -706,7 +738,6 @@ An AI system is **High Risk** when:
   und lässt das meiste zu – setzt aber auf Transparenz.
 -->
 
----
 
 <!-- _class: discussion -->
 <!-- _paginate: false -->

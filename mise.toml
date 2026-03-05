@@ -9,3 +9,9 @@ TF_WORKSPACE = "development"
 run = """
 marp slides.md --html -o out/slides.html
 """
+
+[tasks.all]
+run = """
+marp slides.md --html -o out/slides.html
+marp slides.md --html -o out/slides.pdf
+"""
