@@ -7,20 +7,21 @@ marp: true
 ---
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
   /* ===== ADESSO CORPORATE THEME ===== */
   * {
-    font-family: "Arial"
+    font-family: "Fira Sans"
   }
 
   :root {
-    --adesso-blue: #004B93;
-    --adesso-dark-blue: #00305E;
-    --adesso-light-blue: #0073CF;
+    --adesso-blue: #2F70A6;
+    --adesso-dark-blue: #2F70A6;
+    --adesso-light-blue: #2F70A6;
     --adesso-accent: #00A5E3;
     --adesso-green: #7AB800;
     --adesso-orange: #FF6600;
     --adesso-gray-dark: #333333;
-    --adesso-gray-medium: #666666;
+    --adesso-gray-medium: #9f9f9f;
     --adesso-gray-light: #F2F4F7;
     --adesso-white: #FFFFFF;
   }
@@ -29,7 +30,7 @@ marp: true
   section {
     background: var(--adesso-white);
     color: var(--adesso-gray-dark);
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 24pt;
     padding: 60px 70px 80px 70px;
   }
