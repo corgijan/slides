@@ -1,13 +1,15 @@
 ---
 title: "EU AI Act"
 author: "Jan Vaorin"
-footer: "Jan Vaorin | EU AI Act <img class='adessologo' src='https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg'></b>"
+footer: "Jan Vaorin | EU AI Act </b>"
 paginate: true
 marp: true
 ---
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
   
   * {
     font-family: "Fira Sans"
@@ -16,7 +18,7 @@ marp: true
   :root {
     --adesso-blue: #006ec7;
     --adesso-dark-blue: #00439e;
-    --adesso-light-blue:#002A5E3 ;
+    --adesso-light-blue: #02A5E3 ;
     --adesso-accent: #27d9a7;
     --adesso-green: #7AB800;
     --adesso-orange: #FF6600;
@@ -24,28 +26,33 @@ marp: true
     --adesso-gray-medium: #9f9f9f;
     --adesso-gray-light: #F2F4F7;
     --adesso-white: #FFFFFF;
+    --logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg";
   }
 
-  /* Basis-Slide */
-  section {
-    background: var(--adesso-white);
-    position: relative;
-    color: var(--adesso-gray-dark);
-    font-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 24pt;
-    padding: 60px 70px 80px 70px;
-  }
-
-  /* Linker Akzentstreifen auf normalen Folien */
-  section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(30deg, var(--adesso-blue), var(--adesso-light-blue));
-  }
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;         /* anchor at top-left of slide */
+  width: 100%;     /* cover entire slide */
+  height: 100%;
+  /* 1st background: logo centered at bottom
+     2nd background: vertical stripe on the left */
+  background-image:
+    url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg"),
+    linear-gradient(30deg, var(--adesso-blue), var(--adesso-blue));
+  background-repeat:
+    no-repeat,
+    no-repeat;
+  background-position:
+    right top 30px,  /* logo centered, 10px from bottom */
+    left top;            /* stripe starts at top-left */
+  background-size:
+    120px 40px,          /* logo size */
+    20px 100%;           /* stripe width & full height */
+  pointer-events: none;  /* don't block clicks */
+  z-index: 1;
+}
 
   /* Überschriften */
   section h1 {
@@ -201,8 +208,7 @@ marp: true
     padding: 80px;
   }
   section.chapter::before {
-    background: var(--adesso-light-blue);
-    width: 8px;
+    display: none;
   }
   section.chapter h1 {
     color: var(--adesso-white);
@@ -472,7 +478,7 @@ marp: true
 
 ### Recital 83
 
-It is possible to be **multiple types of entity at once**, according to Recital 83.
+It is possible to be **multiple types of entity at once**.
 
 </div>
 
