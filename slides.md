@@ -1,7 +1,7 @@
 ---
 title: "EU AI Act"
 author: "Jan Vaorin"
-footer: "Jan Vaorin | adesso SE  – EU AI Act"
+footer: "Jan Vaorin | EU AI Act <img class='adessologo' src='https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg'></b>"
 paginate: true
 marp: true
 ---
@@ -29,6 +29,7 @@ marp: true
   /* Basis-Slide */
   section {
     background: var(--adesso-white);
+    position: relative;
     color: var(--adesso-gray-dark);
     font-family: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 24pt;
@@ -125,12 +126,41 @@ marp: true
     font-size: 11pt;
   }
 
-  /* Seitenzahl */
-  section::after {
-    color: var(--adesso-gray-medium);
-    font-size: 11pt;
+  /* ===== TITELFOLIE2 ===== */
+  section.title2 {
+    background: linear-gradient(
+    180deg,
+    var(--adesso-blue) 0%,
+    var(--adesso-blue) 30%,   /* flat area at top */
+    var(--adesso-dark-blue) 70%,
+    var(--adesso-dark-blue) 100%
+  );
+    color: var(--adesso-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
   }
-
+  section.title2::before {
+    display: none;
+  }
+  section.title2 h1 {
+    color: var(--adesso-white);
+    border-bottom: 3px solid var(--adesso-light-blue);
+    font-size: 40pt;
+    margin-bottom: 10px;
+  }
+  section.title2 h2 {
+    color: var(--adesso-light-blue);
+    font-size: 26pt;
+    font-weight: 400;
+  }
+  section.title2 p {
+    color: rgba(255,255,255,0.85);
+    font-size: 20pt;
+  }
   /* ===== TITELFOLIE ===== */
   section.title {
     background: linear-gradient(300deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 60%, var(--adesso-accent) 100%);
@@ -248,12 +278,29 @@ marp: true
     flex: 1;
   }
 
-  /* ===== ADESSO LOGO-BADGE (obere rechte Ecke) ===== */
-  section:not(.title):not(.end)::after {
-    content: '';
-    /* Hier könnte ein adesso-Logo als Hintergrund gesetzt werden */
-  }
+  /* ===== ADESSO LOGO-BADGE (unten rechts) ===== */
+  xx:not(.title):not(.end)::after {
+  position: absolute;
+  right: 0;
+  margin-left: 10px;
+  transform: translateX(-50%);   /* center horizontally */
+  width: 100px;
+  height: 60px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content:'';
+  /*filter: grayscale(1) brightness(0.5); /* gray + slightly darker */
+}
 
+.adessologo:not(.title):not(.end):not(.base2){
+  width: 70px;
+  position: absoulute;
+  bottom:0;
+  right:0;
+  margin-left:00px;
+  margin-bottom: -9px;
+}
   /* ===== RISK-TABELLE CUSTOM STYLES ===== */
   .risk-table th {
     font-size: 16pt;
@@ -315,6 +362,7 @@ marp: true
     margin: 16px 0;
     font-size: 20pt;
   }
+
 </style>
 
 
@@ -322,16 +370,16 @@ marp: true
 <!-- _class: base2 -->
 <!-- _paginate: false -->
 
-  <style>
+ <style>
   .logo-white {
-    width: 200px;           /* adjust to needed size */
+    width: 200px;
     height: 60px;
-    zoom: 300%;
-    background-color: #fff; /* logo color */
-    -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg")
-                  no-repeat center / contain;
-    mask: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg")
-         no-repeat center / contain;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    scale: 350%;
+    filter: invert(1) brightness(200); /* inverts colors -> dark becomes light/white */
   }
 </style>
 
@@ -340,7 +388,7 @@ marp: true
 ---
 
 
-<!-- _class: title -->
+<!-- _class: title2 -->
 <!-- _paginate: false -->
 <!-- _footer: "" -->
 
@@ -351,6 +399,8 @@ marp: true
 **Jan Vaorin** · adesso SE
 
 <!-- Titelfolie – Überblick über die EU-KI-Verordnung -->
+
+
 
 ---
 
@@ -738,6 +788,7 @@ An AI system is **High Risk** when:
   und lässt das meiste zu – setzt aber auf Transparenz.
 -->
 
+---
 
 <!-- _class: discussion -->
 <!-- _paginate: false -->
