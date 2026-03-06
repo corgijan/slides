@@ -16,7 +16,7 @@ marp: true
   :root {
     --adesso-blue: #006ec7;
     --adesso-dark-blue: #00439e;
-    --adesso-light-blue:#00A5E3 ;
+    --adesso-light-blue:#002A5E3 ;
     --adesso-accent: #27d9a7;
     --adesso-green: #7AB800;
     --adesso-orange: #FF6600;
@@ -369,6 +369,7 @@ marp: true
 
 <!-- _class: base2 -->
 <!-- _paginate: false -->
+<!-- _footer: "" -->
 
  <style>
   .logo-white {
@@ -485,6 +486,8 @@ A company that develops an AI model **and** deploys it in its own products acts 
 ---
 
 <!-- _class: chapter -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 
 # 🚦 Risk-Based Classification
 
@@ -667,6 +670,8 @@ An AI system is **High Risk** when:
 ---
 
 <!-- _class: chapter -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 
 # 📋 Requirements for High-Risk Systems
 
@@ -702,6 +707,8 @@ An AI system is **High Risk** when:
 -->
 
 ---
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 
 ![bg right:20%](https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?w=800&auto=format&fit=crop)
 
@@ -747,6 +754,8 @@ An AI system is **High Risk** when:
 ---
 
 <!-- _class: chapter -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
 
 # 📊 Summary
 
@@ -792,6 +801,9 @@ An AI system is **High Risk** when:
 
 <!-- _class: discussion -->
 <!-- _paginate: false -->
+<!-- _paginate: false -->
+<!-- _footer: "" -->
+
 
 # 💬 Discussion
 
@@ -816,4 +828,4 @@ An AI system is **High Risk** when:
 **Jan Vaorin**
 adesso SE
 
-EU AI Act Presentation 2024
+EU AI Act Presentation 2026
