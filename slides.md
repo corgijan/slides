@@ -7,142 +7,158 @@ marp: true
 ---
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
 
-
-  
   * {
-    font-family: "Fira Sans"
+    font-family: "Fira Sans"!important;
+  }
+
+  code, pre, tt, kbd, samp {
+    font-family: "Fira Code", monospace;
   }
 
   :root {
-    --adesso-blue: #006ec7;
-    --adesso-dark-blue: #00439e;
-    --adesso-light-blue: #02A5E3 ;
-    --adesso-accent: #27d9a7;
-    --adesso-green: #7AB800;
+    --adesso-blue: #006EC7;
+    --adesso-dark-blue: #004F9F;
+    --adesso-light-blue: #00A8E0;
+    --adesso-accent: #00C3A0;
+    --adesso-green: #78BE20;
     --adesso-orange: #FF6600;
-    --adesso-gray-dark: #333333;
-    --adesso-gray-medium: #9f9f9f;
-    --adesso-gray-light: #F2F4F7;
+    --adesso-gray-dark: #2D2D2D;
+    --adesso-gray-medium: #7A7A7A;
+    --adesso-gray-light: #F0F4F8;
     --adesso-white: #FFFFFF;
-    --logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg";
   }
 
-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;         /* anchor at top-left of slide */
-  width: 100%;     /* cover entire slide */
-  height: 100%;
-  /* 1st background: logo centered at bottom
-     2nd background: vertical stripe on the left */
-  background-image:
-    url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg"),
-    linear-gradient(30deg, var(--adesso-blue), var(--adesso-blue));
-  background-repeat:
-    no-repeat,
-    no-repeat;
-  background-position:
-    right top 30px,  /* logo centered, 10px from bottom */
-    left top;            /* stripe starts at top-left */
-  background-size:
-    120px 40px,          /* logo size */
-    20px 100%;           /* stripe width & full height */
-  pointer-events: none;  /* don't block clicks */
-  z-index: 1;
-}
+  /* ===== BASE SLIDE ===== */
+  section {
+    background: #FFFFFF;
+    color: var(--adesso-gray-dark);
+    line-height: 1.5;
+  }
 
-  /* Überschriften */
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg"),
+      linear-gradient(to bottom, var(--adesso-blue), var(--adesso-blue));
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+      right 28px top 22px,
+      left top;
+    background-size:
+      130px 42px,
+      7px 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ===== HEADINGS ===== */
   section h1 {
     color: var(--adesso-blue);
     font-size: 36pt;
     font-weight: 700;
     border-bottom: 3px solid var(--adesso-blue);
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 22px;
+    line-height: 1.2;
   }
 
   section h2 {
-    color: var(--adesso-light-blue);
-    font-size: 26pt;
+    color: var(--adesso-dark-blue);
+    font-size: 24pt;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 14px;
   }
 
   section h3 {
-    color: var(--adesso-dark-blue);
-    font-size: 22pt;
+    color: var(--adesso-blue);
+    font-size: 20pt;
     font-weight: 600;
+    margin-bottom: 8px;
   }
 
-  /* Links */
+  /* ===== LINKS ===== */
   section a {
     color: var(--adesso-light-blue);
     text-decoration: none;
   }
-  section a:hover {
-    text-decoration: underline;
-  }
 
-  /* Blockquote – Definition-Style */
+  /* ===== BLOCKQUOTE ===== */
   section blockquote {
     border-left: 5px solid var(--adesso-light-blue);
     background: var(--adesso-gray-light);
-    padding: 20px 25px;
-    margin: 20px 0;
+    padding: 20px 28px;
+    margin: 16px 0;
     border-radius: 0 8px 8px 0;
     font-size: 20pt;
+    font-style: italic;
     color: var(--adesso-gray-dark);
+    line-height: 1.6;
   }
 
-  /* Tabellen */
+  /* ===== TABLES ===== */
   section table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 20pt;
+    font-size: 19pt;
   }
   section table thead th {
     background: var(--adesso-blue);
-    color: var(--adesso-white);
+    color: white;
     padding: 12px 16px;
     text-align: left;
     font-weight: 600;
   }
   section table tbody td {
     padding: 10px 16px;
-    border-bottom: 1px solid #dde1e6;
+    border-bottom: 1px solid #dde3ea;
+    vertical-align: top;
   }
   section table tbody tr:nth-child(even) {
     background: var(--adesso-gray-light);
   }
 
-  /* Listen */
+  /* ===== LISTS ===== */
   section ul, section ol {
-    margin-left: 10px;
+    margin-left: 8px;
+    padding-left: 24px;
   }
   section li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     line-height: 1.5;
   }
 
-  /* Footer */
+  /* ===== FOOTER ===== */
   footer {
     color: var(--adesso-gray-medium);
     font-size: 11pt;
+    letter-spacing: 0.02em;
   }
 
-  /* ===== TITELFOLIE2 ===== */
+  /* ===== BASE2 — LOGO SPLASH ===== */
+  section.base2 {
+    background: var(--adesso-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  section.base2::before { display: none; }
+
+  /* ===== TITLE2 SLIDE ===== */
   section.title2 {
-    background: linear-gradient(
-    180deg,
-    var(--adesso-blue) 0%,
-    var(--adesso-blue) 30%,   /* flat area at top */
-    var(--adesso-dark-blue) 70%,
-    var(--adesso-dark-blue) 100%
-  );
-    color: var(--adesso-white);
+    background: linear-gradient(145deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 58%, #0091d8 100%);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,28 +166,30 @@ section::before {
     text-align: center;
     padding: 80px;
   }
-  section.title2::before {
-    display: none;
-  }
+  section.title2::before { display: none; }
   section.title2 h1 {
-    color: var(--adesso-white);
-    border-bottom: 3px solid var(--adesso-light-blue);
-    font-size: 40pt;
-    margin-bottom: 10px;
+    color: white;
+    border-bottom: 3px solid var(--adesso-accent);
+    font-size: 44pt;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
   }
   section.title2 h2 {
-    color: var(--adesso-light-blue);
-    font-size: 26pt;
+    color: rgba(255,255,255,0.85);
+    font-size: 24pt;
     font-weight: 400;
+    margin-bottom: 10px;
   }
   section.title2 p {
-    color: rgba(255,255,255,0.85);
-    font-size: 20pt;
+    color: rgba(255,255,255,0.72);
+    font-size: 18pt;
+    font-weight: 300;
   }
-  /* ===== TITELFOLIE ===== */
+
+  /* ===== TITLE SLIDE ===== */
   section.title {
     background: linear-gradient(300deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 60%, var(--adesso-accent) 100%);
-    color: var(--adesso-white);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,69 +197,102 @@ section::before {
     text-align: center;
     padding: 80px;
   }
-  section.title::before {
-    display: none;
-  }
+  section.title::before { display: none; }
   section.title h1 {
-    color: var(--adesso-white);
+    color: white;
     border-bottom: 3px solid var(--adesso-light-blue);
-    font-size: 40pt;
-    margin-bottom: 10px;
+    font-size: 44pt;
+    margin-bottom: 16px;
   }
   section.title h2 {
-    color: var(--adesso-light-blue);
+    color: rgba(255,255,255,0.85);
     font-size: 26pt;
     font-weight: 400;
   }
   section.title p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.75);
     font-size: 20pt;
   }
 
-  /* ===== KAPITELFOLIE ===== */
+  /* ===== CHAPTER SLIDE ===== */
   section.chapter {
-    background: var(--adesso-blue);
-    color: var(--adesso-white);
+    background:
+      linear-gradient(to right, var(--adesso-accent) 28%, transparent 28%) bottom / 100% 6px no-repeat,
+      var(--adesso-blue);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 80px;
   }
-  section.chapter::before {
-    display: none;
-  }
+  section.chapter::before { display: none; }
   section.chapter h1 {
-    color: var(--adesso-white);
-    border-bottom: 3px solid var(--adesso-light-blue);
-    font-size: 42pt;
+    color: white;
+    border-bottom: none;
+    font-size: 44pt;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
   }
   section.chapter h2 {
-    color: var(--adesso-light-blue);
+    color: rgba(255,255,255,0.82);
     font-size: 24pt;
     font-weight: 400;
   }
 
-  /* ===== ENDFOLIE ===== */
+  /* ===== END SLIDE ===== */
   section.end {
-    background: linear-gradient(0deg, var(--adesso-blue) 0%, var(--adesso-dark-blue) 100%);
-    color: var(--adesso-white);
+    background: linear-gradient(160deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 100%);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
-  section.end::before {
-    display: none;
-  }
+  section.end::before { display: none; }
   section.end h1 {
-    color: var(--adesso-white);
+    color: white;
     border-bottom: 3px solid var(--adesso-accent);
-    font-size: 42pt;
+    font-size: 44pt;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
   }
   section.end p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.82);
     font-size: 20pt;
+    font-weight: 400;
+  }
+
+  /* ===== DISCUSSION SLIDE ===== */
+  section.discussion {
+    background: linear-gradient(135deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 52%, var(--adesso-accent) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  section.discussion::before { display: none; }
+  section.discussion h1 {
+    color: white;
+    border-bottom: none;
+    font-size: 48pt;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  section.discussion h2 {
+    color: var(--adesso-accent);
+    font-size: 28pt;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  section.discussion h3 {
+    color: rgba(255,255,255,0.88);
+    font-size: 22pt;
+    font-weight: 400;
+    max-width: 80%;
   }
 
   /* ===== CALLOUT BOX ===== */
@@ -249,65 +300,51 @@ section::before {
     background: var(--adesso-gray-light);
     border-left: 5px solid var(--adesso-accent);
     border-radius: 0 8px 8px 0;
-    padding: 18px 24px;
-    margin: 16px 0;
-    font-size: 19pt;
+    padding: 16px 22px;
+    margin: 14px 0;
+    font-size: 18pt;
   }
   .callout h1, .callout h2, .callout h3 {
     color: var(--adesso-blue);
-    font-size: 20pt;
-    border-bottom: none;
+    font-size: 19pt;
+    border: none;
     margin-bottom: 6px;
-    padding-bottom: 0;
+    padding: 0;
   }
   .callout.warning {
     border-left-color: var(--adesso-orange);
-    background: #FFF7F0;
+    background: #FFF5EE;
   }
   .callout.warning h1, .callout.warning h2, .callout.warning h3 {
     color: var(--adesso-orange);
   }
   .callout.note {
     border-left-color: var(--adesso-green);
-    background: #F4FAE8;
+    background: #F2F9E8;
   }
   .callout.note h1, .callout.note h2, .callout.note h3 {
-    color: #5A8F00;
+    color: #4A7A00;
   }
 
   /* ===== MULTI-COLUMN LAYOUT ===== */
   .container {
     display: flex;
-    gap: 30px;
+    gap: 32px;
   }
-  .col {
-    flex: 1;
+  .col { flex: 1; }
+
+  /* ===== HIGHLIGHT BOX ===== */
+  .highlight-box {
+    background: linear-gradient(90deg, var(--adesso-blue), var(--adesso-light-blue));
+    color: white;
+    padding: 18px 26px;
+    border-radius: 8px;
+    margin: 14px 0;
+    font-size: 19pt;
+    font-weight: 500;
   }
 
-  /* ===== ADESSO LOGO-BADGE (unten rechts) ===== */
-  xx:not(.title):not(.end)::after {
-  position: absolute;
-  right: 0;
-  margin-left: 10px;
-  transform: translateX(-50%);   /* center horizontally */
-  width: 100px;
-  height: 60px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f7/Adesso_AG_logo.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  content:'';
-  /*filter: grayscale(1) brightness(0.5); /* gray + slightly darker */
-}
-
-.adessologo:not(.title):not(.end):not(.base2){
-  width: 70px;
-  position: absoulute;
-  bottom:0;
-  right:0;
-  margin-left:00px;
-  margin-bottom: -9px;
-}
-  /* ===== RISK-TABELLE CUSTOM STYLES ===== */
+  /* ===== RISK TABLE ===== */
   .risk-table th {
     font-size: 16pt;
     text-align: center;
@@ -318,55 +355,6 @@ section::before {
     text-align: center;
     vertical-align: top;
     padding: 14px 10px;
-  }
-
-  /* ===== DISKUSSIONSFOLIE ===== */
-  section.base2 {
-    background: var(--adesso-blue);
-    color: var(--adesso-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  section.discussion {
-    background: linear-gradient(135deg, var(--adesso-dark-blue) 0%, var(--adesso-blue) 50%, var(--adesso-accent) 100%);
-    color: var(--adesso-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  section.discussion::before {
-    display: none;
-  }
-  section.discussion h1 {
-    color: var(--adesso-white);
-    border-bottom: none;
-    font-size: 44pt;
-  }
-  section.discussion h2 {
-    color: var(--adesso-accent);
-    font-size: 28pt;
-    font-weight: 400;
-  }
-  section.discussion h3 {
-    color: rgba(255,255,255,0.9);
-    font-size: 22pt;
-    font-weight: 400;
-    max-width: 80%;
-  }
-
-  /* ===== HIGHLIGHT BOX ===== */
-  .highlight-box {
-    background: linear-gradient(90deg, var(--adesso-blue), var(--adesso-light-blue));
-    color: white;
-    padding: 20px 28px;
-    border-radius: 10px;
-    margin: 16px 0;
-    font-size: 20pt;
   }
 
 </style>
@@ -386,7 +374,7 @@ section::before {
     background-position: center;
     background-size: contain;
     scale: 350%;
-    filter: invert(1) brightness(200); /* inverts colors -> dark becomes light/white */
+    filter: brightness(0) invert(1);
   }
 </style>
 
